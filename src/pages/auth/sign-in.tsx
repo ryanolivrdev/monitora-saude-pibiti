@@ -38,7 +38,7 @@ export function SignIn() {
 
   async function handleSignIn({ email, password }: SignInForm) {
     signInWithEmailAndPassword(auth, email, password)
-      .then((user) => {
+      .then(() => {
         toast.success('Logado com sucesso!')
         navigate('/')
       })

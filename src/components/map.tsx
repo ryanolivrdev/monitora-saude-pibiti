@@ -16,8 +16,12 @@ const defaultProps = {
   zoom: 18,
 }
 
-const UserPin = () => (
-  <div className="rounded-full bg-blue-500 p-2 text-white shadow"></div>
+const UserPin = ({ lat, lng }: { lat: number; lng: number }) => (
+  <div
+    className="rounded-full bg-blue-500 p-2 text-white shadow"
+    data-lat={lat}
+    data-lng={lng}
+  ></div>
 )
 
 export function Map() {
